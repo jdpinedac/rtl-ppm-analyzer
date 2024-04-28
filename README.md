@@ -43,6 +43,18 @@ Run the script with the required timeout period (in seconds) as an argument:
 ./rtl_ppm_analyzer.sh 120
 ```
 
+## Understanding Variability in Cumulative PPM
+
+The value of 'cumulative PPM' (parts per million) can vary based on several factors, including the warm-up time of the SDR hardware, ambient temperature, and the physical stability of the device. Here's a deeper look into these factors:
+
+- **Warm-Up Time**: Electronic components within SDRs, especially oscillators, can drift as they warm up. To obtain stable and reliable measurements, it is recommended to allow the SDR to warm up. This typically takes about 10-15 minutes, after which the measurements tend to stabilize.
+
+- **Temperature Effects**: Changes in ambient temperature can affect the components in the SDR, leading to frequency drift. Operating the device in a controlled temperature environment can help minimize these effects.
+
+- **Physical Stability**: Mechanical stress or vibrations can also influence the accuracy of measurements. Ensuring the SDR is placed on a stable surface and away from mechanical disturbances can improve performance.
+
+Understanding these factors can help in setting up experiments and in interpreting the results more accurately.
+
 ## References
 
 This project was inspired by and utilizes concepts described in the following publications:

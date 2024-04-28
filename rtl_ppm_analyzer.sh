@@ -4,6 +4,12 @@
 export LC_NUMERIC="C"
 export LC_ALL="C"
 
+# Verify that rtl_test is installed
+if ! command -v rtl_test &> /dev/null; then
+    echo "Error: rtl-sdr is not installed. Please install rtl-sdr and try again."
+    exit 1
+fi
+
 # Check if the timeout duration parameter has been provided
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <timeout_seconds>"
